@@ -4,6 +4,11 @@ import  string
 import nltk
 nltk.download('punkt')
 
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
